@@ -1,2 +1,5 @@
-Output captured from:
+# Command Used:
 systemctl list-unit-files --type=service | grep enabled
+
+# Purpose:
+Identify all enabled services for minimization review
