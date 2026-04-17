@@ -1,0 +1,5 @@
+# Command Used:
+systemctl list-timers --all
+
+# Purpose:
+Verify timer scheduling and execution intervals
