@@ -1,0 +1,19 @@
+# Lab 6B – Create systemd Timer
+
+1. Create one-shot service
+   vi /etc/systemd/system/daemon-workload-once.service
+
+2. Create timer unit
+   vi /etc/systemd/system/daemon-workload.timer
+
+3. Reload systemd
+   systemctl daemon-reload
+
+4. Enable and start timer
+   systemctl enable --now daemon-workload.timer
+
+5. Verify timer
+   systemctl list-timers
+
+6. Verify execution logs
+   journalctl -u daemon-workload-once.service
