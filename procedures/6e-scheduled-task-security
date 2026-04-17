@@ -1,0 +1,15 @@
+# Lab 6E – Scheduled Task Security
+
+1. Restrict cron usage
+   echo "root" > /etc/cron.allow
+   rm -f /etc/cron.deny
+
+2. Audit cron jobs
+   ls -la /etc/cron.*
+   crontab -l
+
+3. Verify systemd timers
+   systemctl list-timers --all
+
+4. Review timer logs
+   journalctl -u daemon-workload.timer
