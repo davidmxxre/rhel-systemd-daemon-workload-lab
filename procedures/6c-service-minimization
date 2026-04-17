@@ -1,0 +1,16 @@
+# Lab 6C – Service Minimization
+
+1. List enabled services
+   systemctl list-unit-files --type=service | grep enabled
+
+2. Disable unnecessary service
+   systemctl disable --now cups.service
+(may not be instaled on your system)
+
+3. Mask service
+   systemctl mask avahi-daemon.service
+   (may not be instaled on your system)
+
+4. Verify service status
+   systemctl status avahi-daemon.service
+   (may not be instaled on your system)
