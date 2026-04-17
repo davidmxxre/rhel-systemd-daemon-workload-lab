@@ -1,1 +1,5 @@
-Service running at Wed Apr 16 19:00:00 UTC
+# Command Used:
+journalctl -u daemon-workload-once.service --no-pager | tail
+
+# Expected Output Snippet:
+Service running at <timestamp>
