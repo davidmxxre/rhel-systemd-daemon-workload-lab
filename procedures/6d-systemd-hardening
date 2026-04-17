@@ -3,7 +3,21 @@
 1. Edit service override
    systemctl edit daemon-workload.service
 
-2. Add security directives
+2. Add the following security directives:
+
+   [Service]
+
+   # Process & Privilege Controls
+   NoNewPrivileges=yes
+
+   # Filesystem Protections
+   ProtectSystem=full
+   ProtectHome=yes
+   PrivateTmp=yes
+
+   # Resource Limits
+   MemoryMax=100M
+   CPUQuota=50%
 
 3. Reload systemd
    systemctl daemon-reload
@@ -11,5 +25,5 @@
 4. Restart service
    systemctl restart daemon-workload.service
 
-5. Verify resource limits
-   systemctl show daemon-workload.service | grep -E 'MemoryMax|CPUQuota'
+5. Verify protections
+   systemctl show daemon-workload.service | grep -E 'MemoryMax|CPUQuota|NoNewPrivileges'
