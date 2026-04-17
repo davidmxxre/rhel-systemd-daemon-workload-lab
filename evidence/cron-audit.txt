@@ -1,0 +1,3 @@
+/etc/cron.allow configured
+Only root permitted
+No unauthorized cron jobs present
