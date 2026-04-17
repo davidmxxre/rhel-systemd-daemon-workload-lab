@@ -1,0 +1,6 @@
+[Unit]
+Description=Run Daemon Workload Once
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'echo "Service running at $(date)" >> /var/log/daemon-workload.log'
