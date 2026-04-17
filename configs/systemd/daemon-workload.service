@@ -1,0 +1,13 @@
+[Unit]
+Description=Daemon Workload Service
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/sysconfig/daemon-workload
+ExecStart=/opt/mylab/daemon-workload.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
