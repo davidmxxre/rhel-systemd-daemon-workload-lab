@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Daemon Workload Every Minute
+
+[Timer]
+OnBootSec=1m
+OnUnitActiveSec=1m
+Unit=daemon-workload-once.service
+
+[Install]
+WantedBy=timers.target
