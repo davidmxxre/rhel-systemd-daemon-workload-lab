@@ -1,5 +1,1 @@
-vi /etc/sysconfig/daemon-workload
-
-Add:
-
 INTERVAL=10
