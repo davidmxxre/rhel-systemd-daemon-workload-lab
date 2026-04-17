@@ -1,1 +1,5 @@
+# Command Used:
+systemctl status daemon-workload.service
+
+# Expected Output Snippet:
 daemon-workload.service - active (running)
