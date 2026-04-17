@@ -1,0 +1,31 @@
+# Lab 6A – Create Custom systemd Service
+
+1. Create working directory
+   mkdir -p /opt/mylab
+
+2. Create script
+   vi /opt/mylab/daemon-workload.sh
+
+3. Add script content and save
+
+4. Make script executable
+   chmod +x /opt/mylab/daemon-workload.sh
+
+5. Create environment file
+   vi /etc/sysconfig/daemon-workload
+
+6. Add configuration
+   INTERVAL=10
+
+7. Create systemd unit file
+   vi /etc/systemd/system/daemon-workload.service
+
+8. Reload systemd
+   systemctl daemon-reexec
+   systemctl daemon-reload
+
+9. Enable and start service
+   systemctl enable --now daemon-workload.service
+
+10. Verify service status
+    systemctl status daemon-workload.service
