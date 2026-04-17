@@ -1,3 +1,10 @@
-/etc/cron.allow configured
-Only root permitted
-No unauthorized cron jobs present
+# Commands Used:
+
+echo "root" > /etc/cron.allow
+rm -f /etc/cron.deny
+
+ls -la /etc/cron.*
+crontab -l
+
+# Purpose:
+Verify only authorized users can schedule cron jobs
