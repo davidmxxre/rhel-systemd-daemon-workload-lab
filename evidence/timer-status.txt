@@ -1,1 +1,5 @@
+# Command Used:
+systemctl status daemon-workload.timer
+
+# Expected Output Snippet:
 daemon-workload.timer - active (waiting)
