@@ -1,0 +1,15 @@
+# Lab 6D – systemd Hardening
+
+1. Edit service override
+   systemctl edit daemon-workload.service
+
+2. Add security directives
+
+3. Reload systemd
+   systemctl daemon-reload
+
+4. Restart service
+   systemctl restart daemon-workload.service
+
+5. Verify resource limits
+   systemctl show daemon-workload.service | grep -E 'MemoryMax|CPUQuota'
