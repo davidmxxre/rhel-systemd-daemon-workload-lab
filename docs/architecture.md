@@ -9,10 +9,15 @@ Components:
    /etc/sysconfig/daemon-workload
 
 3. systemd Service
-   daemon-workload.service
+   daemon-workload.service (continuous execution)
 
 4. Timer Workflow
    daemon-workload.timer -> daemon-workload-once.service -> script/log
 
-Output:
-Logs written to /var/log/daemon-worlkload.log
+Logs:
+- /var/log/daemon-workload.log
+
+Execution Model:
+- daemon-workload.service runs continuously as a background service
+- daemon-workload.timer triggers a one-shot service at intervals
+- both write to the same log file for verification
